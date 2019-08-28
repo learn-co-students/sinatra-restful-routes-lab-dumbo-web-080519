@@ -1,0 +1,12 @@
+<h1>Recipes</h1>
+<% @recipes.each do |recipe| %>
+    <div class="recipe">
+        <h3>
+            <a href="/recipes/<%= recipe.id %>">
+                Name: <%= recipe.name %>
+            </a>
+        </h3>
+        <h4>Ingredients: <%= recipe.ingredients %></h4>
+        <h4>Cook Time: <%= "#{recipe.cook_time} minutes" %></h4> <% #extra "minutes", test not working properly %>
+    </div>
+<% end %>
